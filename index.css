@@ -1,0 +1,15 @@
+header {
+  text-align: center;
+  font-size: 6vw;
+  margin-bottom: 130px;
+}
+
+.sketch {
+  display: grid;
+  column-gap: 5px;
+}
+
+.sideMenu {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+}
