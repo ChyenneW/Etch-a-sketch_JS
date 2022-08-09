@@ -5,11 +5,11 @@ header {
 }
 
 .sketch {
-  display: grid;
+  display: flex;
   column-gap: 5px;
 }
 
 .sideMenu {
   grid-column: 1;
-  grid-row: 2 / span 2;
+  grid-row: 1 / span 2;
 }
