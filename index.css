@@ -1,3 +1,7 @@
+body {
+  background-color: #f7f5f5;
+}
+
 header {
   text-align: center;
   font-size: 6vw;
@@ -10,6 +14,6 @@ header {
 }
 
 .sideMenu {
-  grid-column: 1;
-  grid-row: 1 / span 2;
+  display: grid;
+  row-gap: 20px;
 }
