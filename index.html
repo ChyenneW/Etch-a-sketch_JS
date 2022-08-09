@@ -14,10 +14,8 @@
     </header>
     <div class="sketch">
       <div class="sideMenu">
-        <div>
-          <button class="colorSelector">
-            <input type="color" />
-          </button>
+        <div class="colorSelector">
+          <input type="color" />
         </div>
         <div>
           <button>Color Mode</button>
@@ -31,7 +29,10 @@
         <div>
           <button>Clear</button>
         </div>
-        <div>grid size slider</div>
+        <div>
+          <div class="gridSlider">16X16</div>
+          <input type="range" min="1" max="100" class="slider" />
+        </div>
       </div>
       <div id="sketchPad"></div>
     </div>

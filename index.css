@@ -10,10 +10,64 @@ header {
 
 .sketch {
   display: flex;
-  column-gap: 5px;
+  column-gap: 15px;
 }
 
 .sideMenu {
   display: grid;
   row-gap: 20px;
+}
+
+.colorSelector input {
+  border: none;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.sideMenu button {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 25px;
+  background-color: #f7f5f5;
+  width: 95%;
+  margin: 5px;
+  font-size: large;
+  transition: all 0.2ms ease-in-out;
+}
+
+.sideMenu button:hover {
+  cursor: pointer;
+  width: 100%;
+  background-color: aquamarine;
+}
+
+.gridSlider {
+  text-align: center;
+  font-size: medium;
+  margin-bottom: 10px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background-color: white;
+  width: 95%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 25px;
+  background: white;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+  margin-top: -6px;
+  background: black;
 }
