@@ -11,8 +11,7 @@ sliderValue.addEventListener('change', (event) => {
 const sketchPad = document.getElementById('sketchPad');
 
 function changePixelPad() {
-    sketchPad.style.gridTemplateColumns = sliderValue.value;
-    sketchPad.style.gridTemplateRows = sliderValue.value;
+    sketchPad.style.gridTemplateColumns = `repeat(${sliderValue.value}, 1fr)`;
 
     sketchPad.textContent = '';
 
