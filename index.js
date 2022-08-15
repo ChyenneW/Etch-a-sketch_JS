@@ -24,3 +24,6 @@ function changePixelPad() {
 }
 
 changePixelPad();
+
+// Color Button
+const colorButton = document.getElementById('colorButton');
