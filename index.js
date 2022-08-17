@@ -9,17 +9,45 @@ sliderValue.addEventListener('change', (event) => {
     changePixelPad();
 });
 
+// Random Colors
+function makeRainbowColors() {
+    let r = Math.floor(Math.random() * 98);
+    let g = Math.floor(Math.random() * 98);
+    let b = Math.floor(Math.random() * 98);
+    let fillerPick = Math.floor(Math.random() * 7)
+
+    r = r.toString();
+    g = g.toString();
+    b = b.toString();
+
+    let filler = ['a', 'b', 'c', '0', 'd', 'e', 'f'];
+
+
+    if (r.length == 1) {
+        r = filler[fillerPick] + r;
+    }
+    if (g.length == 1) {
+        g = filler[fillerPick] + g;
+    }
+    if (b.length == 1) {
+        b = filler[fillerPick] + b;
+    }
+
+    let rainbowColors = `#${r}${g}${b}`;
+    return (rainbowColors)
+}
+
 // ColorPicker
 const colorSelector = document.getElementById('colorSelector');
 const colorButton = document.getElementById('colorButton');
 const rainbowButton = document.getElementById('rainbowButton');
 const eraseButton = document.getElementById('eraseButton');
-let newColor = '#e66465';
+let currentColor = '#e66465';
 
 colorSelector.addEventListener('change', (event) => {
     let selectorColor = event.target.value;
     console.log(event.target.value)
-    newColor = selectorColor;
+    currentColor = selectorColor;
 })
 
 function activeColor(buttonType) {
@@ -27,7 +55,7 @@ function activeColor(buttonType) {
         console.log("hello from active");
 
         if (colorButton.classList.contains('activeButton')) {
-            newColor = colorSelector.value;
+            currentColor = colorSelector.value;
         } else {
             colorButton.classList.toggle('activeButton');
 
@@ -37,9 +65,11 @@ function activeColor(buttonType) {
 
     } else if (buttonType === "rainbowButton") {
         console.log("rainbow");
+        console.log(makeRainbowColors());
 
         if (rainbowButton.classList.contains('activeButton')) {
-            null
+            let randomColor = makeRainbowColors();
+            currentColor = randomColor;
         } else {
             rainbowButton.classList.toggle('activeButton');
 
@@ -51,7 +81,7 @@ function activeColor(buttonType) {
         console.log("clear");
 
         if (eraseButton.classList.contains('activeButton')) {
-            newColor = '#ffffff';
+            currentColor = '#ffffff';
         } else {
             eraseButton.classList.toggle('activeButton');
 
@@ -87,7 +117,7 @@ function changePixelPad() {
         if (e.target.classList.contains('sketchPixel')) {
             let pixelId = e.target.id;
             console.log(e.target.id);
-            document.getElementById(pixelId).style.backgroundColor = `${newColor}`;
+            document.getElementById(pixelId).style.backgroundColor = `${currentColor}`;
         }
     });
 }
