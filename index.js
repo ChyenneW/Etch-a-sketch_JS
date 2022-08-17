@@ -70,6 +70,7 @@ function activeColor(buttonType) {
         if (rainbowButton.classList.contains('activeButton')) {
             let randomColor = makeRainbowColors();
             currentColor = randomColor;
+            colorSelector.value = currentColor;
         } else {
             rainbowButton.classList.toggle('activeButton');
 
