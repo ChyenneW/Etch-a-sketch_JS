@@ -92,7 +92,6 @@ function activeColor(buttonType) {
     }
 }
 
-
 // SketchPad and Pixels
 const sketchPad = document.getElementById('sketchPad');
 let sketchPixel;
@@ -122,5 +121,12 @@ function changePixelPad() {
         }
     });
 }
+
+// Clear all 
+const clearButton = document.getElementById('clearButton');
+
+clearButton.addEventListener('click', () => {
+    changePixelPad();
+});
 
 changePixelPad();
