@@ -31,7 +31,7 @@ header {
   border: 1px solid black;
   border-radius: 15px;
   padding: 25px;
-  background-color: #f7f5f5;
+
   width: 95%;
   margin: 5px;
   font-size: large;
@@ -41,7 +41,10 @@ header {
 .sideMenu button:hover {
   cursor: pointer;
   width: 100%;
-  background-color: aquamarine;
+}
+
+.activeButton {
+  background-color: rgb(121, 119, 119);
 }
 
 #sketchPad {

@@ -18,13 +18,23 @@
           <input type="color" value="#e66465" id="colorSelector" />
         </div>
         <div>
-          <button id="colorButton">Color Mode</button>
+          <button
+            id="colorButton"
+            onclick="activeColor('colorButton')"
+            class="activeButton"
+          >
+            Color Mode
+          </button>
         </div>
         <div>
-          <button>Rainbow Mode</button>
+          <button id="rainbowButton" onclick="activeColor('rainbowButton')">
+            Rainbow Mode
+          </button>
         </div>
         <div>
-          <button>Eraser</button>
+          <button id="eraseButton" onclick="activeColor('erase')">
+            Eraser
+          </button>
         </div>
         <div>
           <button>Clear</button>

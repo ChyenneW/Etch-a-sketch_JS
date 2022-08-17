@@ -12,6 +12,8 @@ sliderValue.addEventListener('change', (event) => {
 // ColorPicker
 const colorSelector = document.getElementById('colorSelector');
 const colorButton = document.getElementById('colorButton');
+const rainbowButton = document.getElementById('rainbowButton');
+const eraseButton = document.getElementById('eraseButton');
 let newColor = '#e66465';
 
 colorSelector.addEventListener('change', (event) => {
@@ -21,16 +23,43 @@ colorSelector.addEventListener('change', (event) => {
 
 function activeColor(buttonType) {
     if (buttonType === "colorButton") {
+        console.log("hello from active");
+
+        if (colorButton.classList.contains('activeButton')) {
+            null
+        } else {
+            colorButton.classList.toggle('activeButton');
+
+            rainbowButton.classList.remove('activeButton');
+            eraseButton.classList.remove('activeButton');
+        }
+
     } else if (buttonType === "rainbowButton") {
-        console.log("rainbow")
+        console.log("rainbow");
+
+        if (rainbowButton.classList.contains('activeButton')) {
+            null
+        } else {
+            rainbowButton.classList.toggle('activeButton');
+
+            colorButton.classList.remove('activeButton');
+            eraseButton.classList.remove('activeButton');
+        }
+
     } else {
         console.log("clear");
+
+        if (eraseButton.classList.contains('activeButton')) {
+            null
+        } else {
+            eraseButton.classList.toggle('activeButton');
+
+            rainbowButton.classList.remove('activeButton');
+            colorButton.classList.remove('activeButton');
+        }
     }
 }
-// console.log("color mode activated");
-// colorButton.classList.add('activeButton');
 
-colorButton.addEventListener('click', activeColor);
 
 // SketchPad and Pixels
 const sketchPad = document.getElementById('sketchPad');
