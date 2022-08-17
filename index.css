@@ -1,16 +1,19 @@
 body {
   background-color: #f7f5f5;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 16px;
 }
 
 header {
   text-align: center;
   font-size: 6vw;
-  margin-bottom: 130px;
+  margin-bottom: 90px;
 }
 
 .sketch {
   display: flex;
-  column-gap: 15px;
+  column-gap: 30px;
 }
 
 .sideMenu {
@@ -44,10 +47,11 @@ header {
 #sketchPad {
   flex: 1 1 auto;
   display: grid;
+  border: 1px solid lightgrey;
+  box-shadow: 10px 20px 25px 15px lightgrey;
 }
 
 .sketchPixel {
-  border: 5px solid black;
   background-color: white;
 }
 
