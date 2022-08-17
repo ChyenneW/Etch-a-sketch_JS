@@ -17,8 +17,9 @@ const eraseButton = document.getElementById('eraseButton');
 let newColor = '#e66465';
 
 colorSelector.addEventListener('change', (event) => {
+    let selectorColor = event.target.value;
     console.log(event.target.value)
-    newColor = event.target.value;
+    newColor = selectorColor;
 })
 
 function activeColor(buttonType) {
@@ -26,7 +27,7 @@ function activeColor(buttonType) {
         console.log("hello from active");
 
         if (colorButton.classList.contains('activeButton')) {
-            null
+            newColor = colorSelector.value;
         } else {
             colorButton.classList.toggle('activeButton');
 
@@ -50,7 +51,7 @@ function activeColor(buttonType) {
         console.log("clear");
 
         if (eraseButton.classList.contains('activeButton')) {
-            null
+            newColor = '#ffffff';
         } else {
             eraseButton.classList.toggle('activeButton');
 

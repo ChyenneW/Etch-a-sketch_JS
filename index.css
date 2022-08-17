@@ -31,16 +31,10 @@ header {
   border: 1px solid black;
   border-radius: 15px;
   padding: 25px;
-
   width: 95%;
   margin: 5px;
   font-size: large;
   transition: all 0.2ms ease-in-out;
-}
-
-.sideMenu button:hover {
-  cursor: pointer;
-  width: 100%;
 }
 
 .activeButton {
